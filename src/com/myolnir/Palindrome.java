@@ -24,12 +24,13 @@ public class Palindrome {
      * @param originalString the original string
      * @return whether the given string a palindrome or not
      */
-    public static boolean isPalindrome(String originalString) {
-        int stringLength = originalString.length();
+    public static boolean isPalindrome(final String originalString) {
+        String formattedInput = originalString.toLowerCase().replaceAll("\\s+", "");
+        int stringLength = formattedInput.length();
         int halfStringLength = stringLength/2;
         int j = stringLength - 1;
         for(int i=0; i<halfStringLength; i++) {
-            if(originalString.charAt(i) != originalString.charAt(j)) {
+            if(formattedInput.charAt(i) != formattedInput.charAt(j)) {
                 return false;
             }
             j--;
