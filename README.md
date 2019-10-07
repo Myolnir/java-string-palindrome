@@ -12,7 +12,7 @@ We only have one for loop so the complexity of the solution is a O(n)
 1. Download/Clone this repository.
 2. Import the downloaded Java Project into some IDE (e.g., IntelliJ, Eclipse, etc.)
 3. Run the [Palindrome.java](src/com/myolnir/Palindrome.java) file for Palindrome Logic.
-4. Run the [com.myolnir.PalindromeTest.java](test/com/myolnir/PalindromeTest.java) file for JUnit Test Cases.
+4. Run the [PalindromeTest.java](test/com/myolnir/PalindromeTest.java) file for JUnit Test Cases.
 
 If you run the program itself the command line should ask you for a string, after you enter the string hits enter and 
 the program returns to you if the string is palindrome or not.
