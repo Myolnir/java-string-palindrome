@@ -7,6 +7,11 @@ but only the first half of it.
 
 We only have one for loop so the complexity of the solution is a O(n)
 
+I do two different algorithms:
+
+* The first one checks the first half of the original string versus the second half starting from the end of the string.
+* The second one just use the reverse method from StringBuilder for java.
+
 ## Installation
 
 1. Download/Clone this repository.

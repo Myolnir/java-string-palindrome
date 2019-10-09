@@ -7,9 +7,15 @@ public class Palindrome {
     public static void main(String[] args) {
         String original;
         Scanner in=new Scanner(System.in);
-        System.out.print("Enter a Number or String: ");
+        System.out.print("Enter a String: ");
         original=in.nextLine();
         if (isPalindrome(original)) {
+            System.out.println("The string is a palindrome");
+        } else {
+            System.out.println("The string is not a palindrome");
+        }
+
+        if (isPalindromeDefaultJava(original)) {
             System.out.println("The string is a palindrome");
         } else {
             System.out.println("The string is not a palindrome");
@@ -24,7 +30,7 @@ public class Palindrome {
      * @param originalString the original string
      * @return whether the given string a palindrome or not
      */
-    public static boolean isPalindrome(final String originalString) {
+    static boolean isPalindrome(final String originalString) {
         String formattedInput = originalString.toLowerCase().replaceAll("\\s+", "");
         int stringLength = formattedInput.length();
         int halfStringLength = stringLength/2;
@@ -36,5 +42,15 @@ public class Palindrome {
             j--;
         }
         return true;
+    }
+
+
+    /**
+     * Same algorithm but with default reverse method from StringBuilder java class.
+     * @param originalString the original string
+     * @return wheter the given string a palindrome or not
+     */
+    static boolean isPalindromeDefaultJava(final String originalString) {
+        return originalString.equals(new StringBuilder(originalString).reverse().toString());
     }
 }
